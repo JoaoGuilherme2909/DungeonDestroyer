@@ -1,4 +1,6 @@
-﻿namespace DungeonDestroyer.entidades;
+﻿using System.Security.Cryptography.X509Certificates;
+
+namespace DungeonDestroyer.entidades;
 
 class Heroi : Entidade
 {
@@ -9,6 +11,7 @@ class Heroi : Entidade
     private int _armadura;
     private int _sorte;*/
     private int _armorPen;
+    private int _ouro;
     private List<Entidade> _items = new List<Entidade>{};
 
     public string nome { set => _nome = value; get => _nome; }
@@ -17,14 +20,16 @@ class Heroi : Entidade
     public int armadura { set => _armadura = value; get => _armadura; }
     public int sorte { set => _sorte = value; get => _sorte; }*/
     public int armorPen { set => _armorPen = value; get => _armorPen; }
+    public int ouro { set => _ouro = value; get => _ouro; }
 
-    public Heroi(int vida, int dano, int armadura, int sorte, int armorPen) : base( vida, dano, armadura, sorte)
+    public Heroi(int vida, int dano, int armadura, int sorte, int armorPen, int ouro) : base( vida, dano, armadura, sorte)
     {
         this.vida = vida; 
         this.dano = dano;
         this.sorte = sorte;
         this.armadura = armadura;
         this.armorPen = armorPen;
+        this.ouro = ouro;
     }
 
     List<Entidade> GetItems()

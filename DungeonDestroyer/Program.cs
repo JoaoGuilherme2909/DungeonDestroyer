@@ -16,7 +16,7 @@ class Program
         Console.WriteLine("Bem vindo ao Dungeon Destroyer!");
         Console.WriteLine("Deseja começar um jogo? S ou N");
         string? escolha = Console.ReadLine();
-        Heroi h1 = new Heroi(vida:500, dano: 30, armadura: 20, sorte: 0, armorPen: 0);
+        Heroi h1 = new Heroi(vida:500, dano: 30, armadura: 20, sorte: 0, armorPen: 0, ouro:0);
 
         if (escolha.Equals("S", StringComparison.CurrentCultureIgnoreCase))
         {
@@ -50,10 +50,11 @@ class Program
             Console.WriteLine("Ent tchau");
             jogo = false; 
         }
-        /*while (jogo == true)
+        while (jogo == true)
         {
+            Console.WriteLine($"Você adentra na masmorra, Você vê um caminho escuro a sua frente e uma loja de items a esquerda, pra onde deseja ir? 1 - ir para frente, 2- ir para a loja");
+            int EscolhaCaminho = int.Parse(Console.ReadLine());
 
-            
-        }*/
+        }
     }
 }
