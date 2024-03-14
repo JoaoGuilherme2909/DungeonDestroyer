@@ -44,7 +44,16 @@ class Heroi : Entidade
         switch (classe)
         {
             case 1:
-                sorte
+                sorte += 10;
+                dano += 20;
+                break;
+            case 2:
+                vida += 20;
+                dano += 10;
+                break;
+            case 3:
+                vida += 20;
+                armadura += 10;
                 break;
         }
     }
