@@ -4,18 +4,18 @@ class Heroi : Entidade
 {
 
     private string _nome;
-    private int _vida;
+    /*private int _vida;
     private int _dano;
     private int _armadura;
-    private int _sorte;
+    private int _sorte;*/
     private int _armorPen;
     private List<Entidade> _items = new List<Entidade>{};
 
     public string nome { set => _nome = value; get => _nome; }
-    public int vida { set => _vida = value; get => _vida; }
+    /*public int vida { set => _vida = value; get => _vida; }
     public int dano { set => _dano = value; get => _dano; }
     public int armadura { set => _armadura = value; get => _armadura; }
-    public int sorte { set => _sorte = value; get => _sorte; }
+    public int sorte { set => _sorte = value; get => _sorte; }*/
     public int armorPen { set => _armorPen = value; get => _armorPen; }
 
     public Heroi(int vida, int dano, int armadura, int sorte, int armorPen) : base( vida, dano, armadura, sorte)

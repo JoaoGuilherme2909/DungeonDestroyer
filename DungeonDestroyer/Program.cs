@@ -26,7 +26,7 @@ class Program
             Console.WriteLine($"    vida: {h1.vida}");
             Console.WriteLine($"    dano: {h1.dano}");
             Console.WriteLine($"    armadura: {h1.armadura}");
-            Console.WriteLine($"    sorte: {h1.sorte}\n");
+            Console.WriteLine($"    sorte: {h1.sorte}");
             Console.WriteLine($"    penetração de armadura: {h1.armorPen}\n");
             Console.WriteLine($"Digete uma das opções para escolher a sua classe como herói: 1 - assassino, 2 - guerreiro, 3 - tank\n");
             int escolhaClasse = int.Parse(Console.ReadLine());

@@ -1,14 +1,32 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace DungeonDestroyer.entidades.inimigos
+﻿namespace DungeonDestroyer.entidades.inimigos
 {
-    internal class Batalha
-    {
-        
+   class Batalha
+   {
+        private Heroi heroi;
+        private List<Entidade> inimigos;
 
-    }
+        public Batalha(Heroi heroi, List<Entidade>inimigos)
+        {
+            this.heroi = heroi;
+            this.inimigos = inimigos;
+        }
+        
+        void atacar(Entidade inimigo, int dano, bool danoHeroi)
+        {
+            if (danoHeroi == true)
+            {
+                inimigo.vida -= heroi.dano;
+            }
+            else
+            {
+                heroi.vida -= inimigo.dano;
+            }
+        }
+
+        Heroi fim()
+        {
+            return heroi;
+        }
+
+   }
 }
