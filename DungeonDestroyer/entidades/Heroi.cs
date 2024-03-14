@@ -8,20 +8,23 @@ class Heroi : Entidade
     private int _dano;
     private int _armadura;
     private int _sorte;
+    private int _armorPen;
     private List<Entidade> _items = new List<Entidade>{};
 
     public string nome { set => _nome = value; get => _nome; }
     public int vida { set => _vida = value; get => _vida; }
     public int dano { set => _dano = value; get => _dano; }
     public int armadura { set => _armadura = value; get => _armadura; }
-    public int sorte { set => _armadura = value; get => _armadura; }
+    public int sorte { set => _sorte = value; get => _sorte; }
+    public int armorPen { set => _armorPen = value; get => _armorPen; }
 
-    public Heroi(int vida, int dano, int armadura, int sorte) : base( vida, dano, armadura, sorte)
+    public Heroi(int vida, int dano, int armadura, int sorte, int armorPen) : base( vida, dano, armadura, sorte)
     {
         this.vida = vida; 
         this.dano = dano;
         this.sorte = sorte;
         this.armadura = armadura;
+        this.armorPen = armorPen;
     }
 
     List<Entidade> GetItems()
@@ -39,21 +42,22 @@ class Heroi : Entidade
         _items.Remove(item);
     }
 
-    void ChooseClass(int classe)
+    public void ChooseClass(int classe)
     {
         switch (classe)
         {
             case 1:
                 sorte += 10;
                 dano += 20;
+                armorPen += 10;
                 break;
             case 2:
-                vida += 20;
-                dano += 10;
+                vida += 50;
+                dano += 30;
                 break;
             case 3:
-                vida += 20;
-                armadura += 10;
+                vida += 70;
+                armadura += 20;
                 break;
         }
     }
